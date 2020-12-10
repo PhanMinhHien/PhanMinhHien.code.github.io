@@ -1,0 +1,27 @@
+@import "reset.scss";
+.block-item-post {
+  .block-content {
+    padding: 10px 0;
+    h3 {
+      line-height: 1.25;
+      a {
+        @include default_link(18px, #000);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        &:hover {
+          @include default_link_hover($color-default);
+        }
+      }
+    }
+    .block-hometext {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 3;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+    }
+  }
+}

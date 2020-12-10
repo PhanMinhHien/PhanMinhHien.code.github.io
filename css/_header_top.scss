@@ -1,0 +1,79 @@
+@import "reset.scss";
+/* Box-header-top */
+.box-header-top {
+  padding: 20px 0;
+  .block-logo,
+  .block-search,
+  .block-hotline,
+  .block-user,
+  .block-cart {
+    @include display-flex(center, center);
+  }
+  .block-search {
+    .form-control.search {
+      border-color: #ececec;
+      border-right: 1px solid transparent;
+      &::-webkit-input-placeholder {
+        /* Edge */
+        font-size: 14px;
+      }
+
+      &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        font-size: 14px;
+      }
+
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+    .btn-search {
+      border-color: #ececec;
+      border-left: 1px solid transparent;
+      .fa-search {
+        color: #b1b1b1;
+      }
+    }
+  }
+  .block-hotline {
+    h3 {
+      font-family: $font-family;
+      font-size: 16px;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      span {
+        color: #ff6f00;
+        font-weight: bold;
+      }
+    }
+  }
+  .block-user {
+    a {
+      font-family: $font-family;
+      color: #000;
+      margin-right: 15px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.5s ease;
+      &:hover {
+        color: $color-default;
+        text-decoration: none;
+      }
+    }
+  }
+  .block-cart {
+    .items-cart-inner {
+      position: relative;
+      span.cartCount {
+        position: absolute;
+        background-color: #ff6f00;
+        color: #fff;
+        border-radius: 8px;
+        padding: 0 7px;
+        top: 0;
+        right: -5px;
+        font-size: 12px;
+      }
+    }
+  }
+}

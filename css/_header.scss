@@ -1,0 +1,54 @@
+@import "reset.scss"; /* Box-header */
+header {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+}
+.header-main {
+    padding: 25px 0;
+    .wsmainwp {
+        max-width: 100%;
+        margin: unset;
+    }
+    .wsmenu > .wsmenu-list > li > ul.sub-menu {}
+    .wsmenu > .wsmenu-list {
+        background-color: transparent;
+        & > li {
+            transition: all .5s ease;
+            & > a {
+                color: #fff;
+                font-size: 16px;
+                padding: 0 .875rem;
+                line-height: 0;
+                transition: all .3s ease;
+                & > .wsarrow:after {
+                    right: 20px;
+                }
+            }
+            &:hover > a {
+                color: $color-default;
+            }
+            & > ul.sub-menu {
+                background-color: rgba(26, 26, 26, 0.9);
+                & > li {
+                    & > a {
+                        border-bottom: 1px solid rgba(73, 71, 71, 0.15) !important;
+                        color: #999;
+                    }
+                    &:hover > a {
+                        color: $color-default;
+                    }
+                    & > a:hover {
+                        background-color: rgba(255, 255, 255, 0.1);
+                    }
+                }
+            }
+        }
+    }
+    .header-main--bottom {
+        .menu-main {
+            @include display-flex(flex-end, flex-end);
+        }
+    }
+}
